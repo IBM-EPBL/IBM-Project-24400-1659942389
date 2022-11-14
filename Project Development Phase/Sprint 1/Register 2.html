@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Plasma donor Application</title>  
+  <link rel="icon" href="static\img\logo.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="static\css\Register_2.css">
+</head>  
+
+<body>  
+  <div class="container">
+    <img class="img-responsive" src="static\img\Background.png" height="630px" width="1100px">
+    <div class="text1"><a href="{{ url_for('L_page') }}">Login</a></span></div>
+    <form action="http://localhost:5000/secondregister" method="post">
+      <div class="form__group">
+        <textarea class="form__field" rows = "1" cols = "60" placeholder="Address" name="address"></textarea><br>
+        <label for="address" class="form__label" id="bloodtype">Address</label><br>
+      </div>
+      <div class="form__group">
+        <input type="tel" class="form__field" placeholder="Mobile No" name="phone" id='phone' required />
+        <label for="phone" class="form__label">Mobile No</label><br>
+      </div>
+      <div class="form__group">
+            <label for="bloodtype" id="bloodtype">Blood Type</label><br>
+            <div class="row" id="buttons">
+                <div class="col-md-3" id="rb"><input type="radio" name="blood_type" value="A+"> A+</div>
+
+                <div class="col-md-3" id="rb"><input type="radio" name="blood_type" value="O+"> O+  </div>
+                
+                <div class="col-md-3" id="rb"><input type="radio" name="blood_type" value="B+"> B+  </div>
+                
+                <div class="col-md-3" id="rb"> <input type="radio" name="blood_type" value="AB+"> AB+ </div> <br> 
+                
+                <div class="col-md-3" id="rb"> <input type="radio" name="blood_type" value="A-"> A- </div>
+                
+                <div class="col-md-3" id="rb"> <input type="radio" name="blood_type" value="O-"> O-  </div>
+                
+                <div class="col-md-3" id="rb"> <input type="radio" name="blood_type" value="B-"> B-  </div>
+
+                <div class="col-md-3" id="rb"> <input type="radio" name="blood_type" value="AB-"> AB- <br> </div>
+            </div>
+        </div>
+      <input type="submit" value="Register">
+    </form>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>  
+</body>  
+</html>  

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Plasma donor Application</title>  
+  <link rel="icon" href="static\img\logo.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="static\css\login.css">
+</head>  
+
+<body>  
+    <div class="container">
+        <img class="img-responsive" src="static\img\Background2.png" height="630px" width="1100px">
+        <form action="http://localhost:5000/login" method="post">
+            <div class="form__group">
+            <input type="email" class="form__field" placeholder="Email" name="email" id='email' required />
+            <label for="Email" class="form__label">Email</label><br>
+            </div>
+            <div class="form__group">
+            <input type="password" class="form__field" placeholder="password" name="password" id='password' required />
+            <label for="password" class="form__label">Password</label><br>
+            <input type="submit" value="Login">
+            <dev class="text1">New User ?<span style="color:blue"><a href="{{ url_for('R_page') }}">Register</a></span></dev>
+        </form>
+    </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>  
+</body>  
+</html>  

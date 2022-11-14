@@ -1,0 +1,87 @@
+.container{
+    position: relative;
+
+}
+.text1{
+    position: absolute;
+    font-size: 30px;
+    font-weight: 700;
+    font-family:'Times New Roman', Times, serif;
+    -webkit-text-stroke: 1px #000000;
+    right: 120px;
+    top: 60px;
+    color: #6D0644;
+}
+form{
+    position: absolute;
+    right: 21%;
+    top: 30%;
+    width: 23%;
+}
+input[type = submit] {
+
+    color: #6D0644;
+    font-family:'Times New Roman', Times, serif;
+    -webkit-text-stroke: 1px #000000;
+    font-size: 32px;
+    font-weight: 700;
+    float: right;
+    margin-right: -20%;
+    margin-top: 7%;
+    background: transparent;
+    border: none;   
+}
+.form__group {
+    position: relative;
+    padding: 30px 0 0;
+}
+.form__field {
+    font-family: inherit;
+    width: 120%;
+    border: 0;
+    border-bottom: 2px solid #6D0644;;
+    outline: 0;
+    font-size: 1.3rem;
+    color: #6D0644;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+.form__field::placeholder {
+    color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+    font-size: 2rem;
+    cursor: text;
+    top: 0px;
+
+}
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    font-family:'Times New Roman', Times, serif;
+    transition: 0.2s;
+    font-size: 2rem;
+    color: #6D0644;
+    margin-top: 10px;
+}
+.form__field:focus {
+    padding-bottom: 0px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 2rem;
+    color: #000000;
+    font-weight: 700;
+}
+.form__field:required, .form__field:invalid {
+    box-shadow: none;
+}
+
