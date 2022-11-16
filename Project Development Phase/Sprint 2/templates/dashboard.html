@@ -1,0 +1,106 @@
+
+
+{% extends 'profile.html' %}
+
+
+{% block content %}
+<br>
+<nav class="navbar navbar-expand-md">
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+        <li class="nav-item mr-3">
+            <select id="city" class="form-select" >
+                {% for i in locarr %}
+                
+                    <option value="{{i[0]}}">{{i[0]}}</option>
+                
+                {% endfor %}
+
+                <option value="" selected>none</option>
+              </select>
+        </li>
+
+        <li class="nav-item mr-3">
+            <select id="bg" class="form-select" >
+                {% for i in bgarr %}
+                
+                    <option value="{{i[0]}}">{{i[0]}}</option>
+                
+                {% endfor %}
+
+                <option value="" selected>none</option>
+                
+            </select>
+        </li>
+        
+        <li class="nav-item mr-3">
+            <select id="hosp" class="form-select" >
+                {% for i in hosarr %}
+                
+                <option value="{{i[0]}}">{{i[0]}}</option>
+                
+                {% endfor %}
+                <option value="" selected>none</option>
+                
+            </select>
+        </li>
+        
+        <li class="nav-item ">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick=" filterfunc();">Search</button>
+        </li>
+    </ul>
+
+    </div>
+
+  </nav>
+
+{% for record in requestarray  %}
+    
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{record[2]}}</h5>
+        <p class="card-text">{{record[3]}}</p>
+        <p class="card-text">{{record[4]}}</p>
+        <p class="card-text">{{record[5]}}</p>
+        <button class="btn btn-primary " formid='{{record[1]}}' onclick="postreq('{{record[1]}}')">Donate</a>
+    </div>
+</div>
+    
+
+{% endfor %}
+
+{% endblock content %}
+
+
+{% block jsextn %}
+    
+<script>
+
+    function postreq(val){
+
+        fetch('/changestatus/'+val)
+            .then((response) => response)
+            .then((data) => console.log(data));
+
+        console.log(val);
+        
+    }
+
+    function filterfunc(){
+
+        var hosp = document.getElementById("hosp").value;
+        var bg = document.getElementById("bg").value;
+        var loc = document.getElementById("city").value;
+
+        location.replace(`/dashboard?hosp=${hosp}&bg=${bg}&city=${city}`)
+        console.log(hosp + bg + city);
+
+    }
+
+</script>
+
+{% endblock jsextn %}
