@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pda
+
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pda
+  template:
+    metadata:
+      labels:
+        app: pda
+
+    spec:
+      containers:
+        - name: pda-container
+          image: pda-testing
+          imagePullPolicy: Never
+          ports:
+             - containerPort: 5000
+               protocol: TCP
