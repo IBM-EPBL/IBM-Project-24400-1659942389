@@ -4,7 +4,7 @@ body {
     margin: 0;
     /* background-color: #1b1b32; */
     background-image: url('https://model001.s3.jp-tok.cloud-object-storage.appdomain.cloud/pngtree.jpg');
-    color: #f3f3f3;
+    color: #472dcc;
     font-family: Tahoma;
       font-size: 16px;
       background-size: cover;
@@ -64,7 +64,7 @@ body {
     margin: 1em auto;
     height: 2em;
     font-size: 1.1rem;
-    background-color: #ffffff;
+    background-color: #d32121;
     border-color: rgb(11, 11, 11);
     min-width: 300px;
   }
@@ -74,15 +74,15 @@ body {
   }
   
   a {
-    color: #dfdfe2;
+    color: #2020aa;
   }
   
   button a:link { 
     text-decoration: none;
 }
-button a:visited { text-decoration: none; color:#ffffff;}
+button a:visited { text-decoration: none; color:#440d0d;}
 
-button a:hover { text-decoration: none; color:#ffffff; }
+button a:hover { text-decoration: none; color:#641010; }
 
 a:active { text-decoration: none; }
 
