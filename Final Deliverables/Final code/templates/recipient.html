@@ -22,15 +22,15 @@
                 </a>
 
                 <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="/" class="nav-link px-2 text-white"><b>Home</b></a></li> &nbsp;&nbsp;
-                    <li><a href="#" class="nav-link px-2 text-white"><b>About</b></a></li> &nbsp;&nbsp;
-                    <li><a href="#" class="nav-link px-2 text-white"><b>Blogs</b></a></li> &nbsp;&nbsp;
+                    <li><a href="index.html" class="nav-link px-2 text-white"><b>Home</b></a></li> &nbsp;&nbsp;
+                    <li><a href="about.html" class="nav-link px-2 text-white"><b>About</b></a></li> &nbsp;&nbsp;
+                    <li><a href="blog.html" class="nav-link px-2 text-white"><b>Blogs</b></a></li> &nbsp;&nbsp;
                     <li><a href="#" class="nav-link px-2 text-white"><b>Camps</b></a></li>
                 </ul>
                 <div class="text-end">
-                  <button type="button" class="btn btn-outline-secondary"><a href="/adminlogin">Admin Login</a></button>
-                  <button type="button" class="btn btn-outline-info"><a href="/recipientlogin">Looking for plasma?</a></button>
-                  <button type="button" class="btn btn-outline-warning"><a href="/donarlogin">Donate Now!</a></button>
+                  <button type="button" class="btn btn-outline-secondary"><a href="adminlogin.html">Admin Login</a></button>
+                  <button type="button" class="btn btn-outline-info"><a href="recipientlogin.html">Looking for plasma?</a></button>
+                  <button type="button" class="btn btn-outline-warning"><a href="donar.html">Donate Now!</a></button>
                 </div>
             </div>
         </div>
@@ -44,10 +44,10 @@
         <!--donar table-->
         <div class="foot">
             <center><h3>RECIPIENT DETAILS</h3></center>
-            <a href="/">
+            <a href="index.html">
               <button style="margin-left: 20px;" type="button" class="btn btn-success">Log out</button></a>
            
-            <center><p>{{msg}}</p></center>
+            
             <center>
             <form action="{{ url_for('takeplasma') }}" method="POST">   
                 <table align="center" cellpadding = "5">
